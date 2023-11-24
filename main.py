@@ -1,12 +1,13 @@
 import streamlit as st
 import pickle
 import pandas as pd
+import os
 
 # Load medicine data and similarity matrix
-medicines_dict = pickle.load(open('medicine_dict.pkl', 'rb'))
+medicines_dict = pickle.load(open(os.path.join(base_path, 'medicine_dict.pkl'), 'rb'))
 medicines = pd.DataFrame(medicines_dict)
-similarity = pickle.load(open('similarity.pkl', 'rb'))
-l=pd.read_csv('medicine.csv')
+similarity = pickle.load(open(os.path.join(base_path, 'similarity.pkl'), 'rb'))
+l = pd.read_csv(os.path.join(base_path, 'medicine.csv'))
 
 
 st.set_page_config(
