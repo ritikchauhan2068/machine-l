@@ -6,7 +6,7 @@ import os
 # Load medicine data and similarity matrix
 medicines_dict = pickle.load(open(os.path.join(base_path, 'medicine_dict.pkl'), 'rb'))
 medicines = pd.DataFrame(medicines_dict)
-similarity = pickle.load(open(os.path.join(base_path, 'similarity.pkl'), 'rb'))
+similarity = pickle.load(open(os.path.join(base_path, 'Pickle-files.rar/similarity.pkl'), 'rb'))
 l = pd.read_csv(os.path.join(base_path, 'medicine.csv'))
 
 
